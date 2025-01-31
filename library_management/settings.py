@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-oxn+xm9a3jiv90nmxvxw3*&i6+fp*56m56-tz&+#i3*ocv3y3p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["Doradino.pythonanywhere.com"]
 
@@ -61,7 +61,7 @@ ROOT_URLCONF = 'library_management.urls'
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/1',  # Default Redis server location
+        'LOCATION': 'redis-16038.c61.us-east-1-3.ec2.redns.redis-cloud.com:16038', 
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         }
@@ -135,7 +135,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
-MEDIA_ROOT = BASE_DIR / "media"
+
 
 
 # Default primary key field type
