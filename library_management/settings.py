@@ -61,9 +61,10 @@ ROOT_URLCONF = 'library_management.urls'
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://default:ZqK0Psq2YAwfIfWsdaMlRR35H6DzmmXb@redis-16038.c61.us-east-1-3.ec2.redns.redis-cloud.com:16038', 
+        'LOCATION': 'rediss://default:ZqK0Psq2YAwfIfWsdaMlRR35H6DzmmXb@redis-16038.c61.us-east-1-3.ec2.redns.redis-cloud.com:16038', 
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+            'CONNECTION_POOL_KWARGS': {'ssl': True},
         }
     }
 }
